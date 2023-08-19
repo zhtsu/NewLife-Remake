@@ -6,6 +6,7 @@ image bg bedroom = "bedroom.jpg"
 image bg classroom = "classroom.jpg"
 image bg gathering_place = "gathering_place.jpg"
 image bg girl_home = "girl_home.jpg"
+image bg house = "house.jpg"
 image girl unhappy = "girl_unhappy.png"
 image girl happy = "girl_happy.png"
 image girl wanttalk = "girl_want_talk.png"
@@ -15,7 +16,7 @@ image girl leave = "girl_leave.png"
 image girl anger = "girl_anger.png"
 
 label start:
-    scene bg bedroom
+    scene bg bedroom with wipedown
 
     "{cps=12}你一直很憧憬现充丰富多彩的生活{/cps}"
     
@@ -179,10 +180,11 @@ label together:
 
     "{cps=12}班花原本还有些犹豫要不要接受你的邀请，但越来越大的雨让她最终同意了你的邀请{/cps}"
 
-    hide bg
-    hide girl
+    scene bg house with dissolve
 
     "{cps=12}你将班花送回了家，却惊讶的发现她家是很破旧的老房子，与她那看上去光鲜亮丽的外表完全不符{/cps}"
+
+    show girl smile with fade
 
     "{cps=12}班花看到你身上被淋湿了，犹豫了一会邀请你进去坐坐，等雨小一些了再走{/cps}"
 
@@ -253,11 +255,17 @@ label girl_home_ask:
 label girl_home_mute:
     play music debu
 
+    show girl anger
+
     "{cps=12}尽管 你看出来了班花有些什么想要说的，但是你谨慎的选择了闭口不谈{/cps}"
 
     "{cps=12}最后你在雨停之后便离开了班花家{/cps}"
 
-    jump MDD
+    show girl leave
+
+    "{cps=12}你依旧在追求着现充生活但是那些现充的行为却让你感到极其不适{/cps}"
+
+    "{cps=12}最后在长年的压力下你得上了抑郁症，最后一辈子郁郁寡欢{/cps}"
 
     "Bad End 6 - 懦弱"
 
@@ -296,14 +304,11 @@ label no:
     "你的表现很明显让眼前的人感到了失望，在接下来的一段时间里你们之间没有再说过一句话"
     "雨停之后你便离开了班花家，在那之后你们两个渐行渐远"
     
-    jump MDD
+    "{cps=12}你依旧在追求着现充生活但是那些现充的行为却让你感到极其不适{/cps}"
+
+    "{cps=12}最后在长年的压力下你得上了抑郁症，最后一辈子郁郁寡欢{/cps}"
 
     "Bad End 7 - 虚伪"
 
     return
 
-
-label MDD:
-    "{cps=12}你依旧在追求着现充生活但是那些现充的行为却让你感到极其不适{/cps}"
-
-    "{cps=12}最后在长年的压力下你得上了抑郁症，最后一辈子郁郁寡欢{/cps}"

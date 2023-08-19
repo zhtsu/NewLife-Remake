@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 18: play requires a file
-    play music 
-               ^
+File "game/script.rpy", line 266: expected statement.
+    use MDD
+           ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sat Aug 19 12:31:57 2023
+Sat Aug 19 14:37:15 2023
