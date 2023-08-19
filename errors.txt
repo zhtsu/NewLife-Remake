@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 8: end of line expected.
-    m "我" "挺好的……"
-          ^
+File "game/script.rpy", line 18: play requires a file
+    play music 
+               ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sat Aug 19 07:05:12 2023
+Sat Aug 19 12:31:57 2023

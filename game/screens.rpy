@@ -288,7 +288,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("开始游戏") action Start()
+            textbutton _("开始") action Start()
 
         else:
 
@@ -296,7 +296,7 @@ screen navigation():
 
             textbutton _("保存") action ShowMenu("save")
 
-        textbutton _("读取游戏") action ShowMenu("load")
+        textbutton _("读取") action ShowMenu("load")
 
         textbutton _("设置") action ShowMenu("preferences")
 
@@ -310,10 +310,10 @@ screen navigation():
 
         textbutton _("关于") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## “帮助”对移动设备来说并非必需或相关。
-            textbutton _("帮助") action ShowMenu("help")
+            # textbutton _("帮助") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -338,16 +338,19 @@ style navigation_button_text:
 ##
 ## https://www.renpy.cn/doc/screen_special.html#main-menu
 
+define main_menu_bg = "school.jpg"
+
 screen main_menu():
 
     ## 此语句可确保替换掉任何其他菜单屏幕。
     tag menu
 
-    add gui.main_menu_background
+    add main_menu_bg
 
     ## 此空框可使标题菜单变暗。
     frame:
         style "main_menu_frame"
+    
 
     ## use 语句将其他的屏幕包含进此屏幕。标题屏幕的实际内容在导航屏幕中。
     use navigation
@@ -357,11 +360,8 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "[config.name!t]" size 100:
                 style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
 
 
 style main_menu_frame is empty
