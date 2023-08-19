@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 8: end of line expected.
+    m "我" "挺好的……"
+          ^
+
+Ren'Py Version: Ren'Py 8.1.1.23060707
+Sat Aug 19 07:05:12 2023
