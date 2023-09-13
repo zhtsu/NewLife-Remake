@@ -1,14 +1,18 @@
 # NewLife-Remake
 AVG：从今天开始新生活（重置版）
 
-## Environment
+## Contrast
 
-- Windows 11
+### Old Version
 
-## Dev Kits
+https://gitee.com/zhtsu/NewLife
 
-- Ren'Py
+Made with Vue.js
 
-## Screenshots
+![old new life](screenshots/old_new_life.png)
+
+### Remake Version
+
+Made with Ren'Py
 
 ![main menu](screenshots/new_life.png)
