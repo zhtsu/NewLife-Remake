@@ -1,24 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 7, in script
-    image bg gathering_place = ""
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 89, in script
+    jump home
+ScriptError: could not find label 'home'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 7, in script
-    image bg gathering_place = ""
-  File "C:\portable\renpy-8.1.1-sdk\renpy\ast.py", line 1241, in execute
-    renpy.exports.image(self.imgname, img)
-  File "C:\portable\renpy-8.1.1-sdk\renpy\exports.py", line 335, in image
-    d = renpy.easy.displayable(d)
-  File "C:\portable\renpy-8.1.1-sdk\renpy\easy.py", line 117, in displayable
-    raise Exception("An empty string cannot be used as a displayable.")
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 89, in script
+    jump home
+  File "C:\portable\renpy-8.1.1-sdk\renpy\ast.py", line 1992, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\portable\renpy-8.1.1-sdk\renpy\script.py", line 1013, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'home'.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.1.23060707
 从今天开始新生活 1.0
-Sat Aug 19 11:45:19 2023
+Sat Aug 19 14:47:05 2023

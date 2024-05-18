@@ -24,7 +24,7 @@ label start:
     
     "{cps=12}你很认真地学习起来......{/cps}"
 
-    "{cps=12}今天的时间过得很快，离上课只有 15 分钟了{/cps}"
+    "{cps=12}中午的时间过得很快，离上课只有 15 分钟了{/cps}"
 
     menu:
         "得赶紧去教室":
@@ -65,9 +65,9 @@ label sleep:
 
     "{cps=12}你成为了一个备受大家欢迎的人，交到许多热心的朋友{/cps}"
 
-    "{cps=12}以后的日子里，你也将时常沉浸在虚幻的梦境中......{/cps}"
+    "{cps=12}往后的日子里，你也将时常沉浸在虚幻的梦境中......{/cps}"
 
-    "Bad End 1 - 放纵"
+    "Bad Ending 1 - 放纵"
 
     return
 
@@ -91,15 +91,13 @@ label talk:
 label mute:
     play music debu
 
-    scene bg bedroom with dissolve
-
     "{cps=12}恪守死宅之心的你拉不下面子去加入那些对你而言很无聊的话题{/cps}"
 
     "{cps=12}于是你暂时蛰伏起来，想要去寻找下一个机会{/cps}"
 
     "{cps=12}这个机会也许就在明天，也许永远不会到来{/cps}"
 
-    "Bad End 2 - 固执"
+    "Bad Ending 2 - 固执"
 
     return
 
@@ -107,7 +105,7 @@ label mute:
 label party:
     play music party
 
-    scene bg gathering_place
+    scene bg gathering_place with dissolve
 
     "{cps=12}在聚会上你用从网上背下来的交友方法混的如鱼得水{/cps}"
 
@@ -125,6 +123,22 @@ label party:
             jump wait
 
 
+label home:
+    play music debu
+
+    scene bg bedroom with dissolve
+
+    "{cps=12}周末你一直呆在家里打游戏{/cps}"
+
+    "{cps=12}游戏带来的快感刺激着你，聚会的事情早已被你抛到脑后{/cps}"
+
+    "{cps=12}往后的日子里，你也将时常和游戏共度周末{/cps}"
+
+    "Bad Ending 8 - 傲慢"
+
+    return
+
+
 label ask:
     play music debu
 
@@ -136,7 +150,7 @@ label ask:
 
     "{cps=12}最后你现充没做成还浪费了你宝贵安定学习时间，高考失利，成为了老鼠人{/cps}"
 
-    "Bad End 3 - 笨拙"
+    "Bad Ending 3 - 笨拙"
 
     return
 
@@ -170,7 +184,7 @@ label alone:
 
     "{cps=12}想要爬下床找药吃的时候却两脚一软身体向下倒去头撞到尖锐的铁制桌子的桌角上，结束了你的一生{/cps}"
 
-    "Bad End 4 - 倒霉"
+    "Bad Ending 4 - 倒霉"
 
     return
 
@@ -220,11 +234,15 @@ label girl_home:
 label refuse:
     play music debu
 
+    show girl anger
+    
     "{cps=12}你独自走回了家{/cps}"
 
+    scene bg bedroom with dissolve
+    
     "{cps=12}习惯性的拒绝让你注定不会与他人有过多交集{/cps}"
 
-    "Bad End 5 - 无奈"
+    "Bad Ending 5 - 无奈"
 
     return
 
@@ -267,7 +285,7 @@ label girl_home_mute:
 
     "{cps=12}最后在长年的压力下你得上了抑郁症，最后一辈子郁郁寡欢{/cps}"
 
-    "Bad End 6 - 懦弱"
+    "Bad Ending 6 - 懦弱"
 
     return
 
@@ -291,7 +309,7 @@ label yes:
 
     "{cps=12}你从她身上感到一阵莫名的心安，你们聊了很多，最后成为了很好的朋友。{/cps}"
 
-    "Happy End - 真诚"
+    "Happy Ending - 真诚"
 
     return
 
@@ -308,7 +326,7 @@ label no:
 
     "{cps=12}最后在长年的压力下你得上了抑郁症，最后一辈子郁郁寡欢{/cps}"
 
-    "Bad End 7 - 虚伪"
+    "Bad Ending 7 - 虚伪"
 
     return
 
