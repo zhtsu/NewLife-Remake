@@ -5,7 +5,7 @@ AVG：从今天开始新生活（重置版）
 
 ### Old Version
 
-https://gitee.com/zhtsu/NewLife
+~~https://gitee.com/zhtsu/NewLife~~
 
 Made with Vue.js
 
